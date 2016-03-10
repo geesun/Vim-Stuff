@@ -1,5 +1,0 @@
-1. Copy .vimrc to ~/
-2. Copy nerdtree_plugin plugin ~/.vim/
-3. Copy mkproj workspace.vim ~/utils/
-
-Note: Before use the project. run the mkproj in the project root dir
