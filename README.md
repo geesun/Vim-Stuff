@@ -35,7 +35,8 @@ Installation
     cd ~/.vim/plugged/YouCompleteMe/ 
     ./install.sh --clang-completer --system-clang
 ```
-    In your project root directory, you can copy ycm_extra_conf.py and rename it as .ycm_extra_conf.py, and then change the CFLAGS in .ycm_extra_conf.py according to the project.
+    In your project root directory, you can copy ycm_extra_conf.py and rename it as .ycm_extra_conf.py, 
+    and then change the CFLAGS in .ycm_extra_conf.py according to the project.
    
     genHeader.sh used for generate the -I option in ycm_extra_conf.py, like below: 
 
