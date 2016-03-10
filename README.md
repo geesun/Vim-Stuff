@@ -14,7 +14,7 @@ I'm a C/C++ developer,so this vim profile is very suitable for C/C++ developer, 
 
 Installation
 ============
-### Install this profile,run the following commands in your terminal:
+###1.Install vim profile
  
 ```
     git clone https://github.com/geesun/Android-stuff.git
@@ -23,28 +23,29 @@ Installation
     cp vim ~/.vim -a 
 ```
   
-### Install plug in vim: 
+###2. Install plugin
 
 ```
     :PlugInstall 
 ```
 
-### Complete YouCompleteMe install with following commands: 
+###3. Install YouCompleteMe: 
+######    Install Language support
 
 ```BASH
     cd ~/.vim/plugged/YouCompleteMe/ 
     ./install.sh --clang-completer --system-clang
 ```
-    In your project root directory, you can copy ycm_extra_conf.py and rename it as .ycm_extra_conf.py, 
-    and then change the CFLAGS in .ycm_extra_conf.py according to the project.
+
+######    Copy extra conf
+In your project root directory, you can copy ycm_extra_conf.py and rename it as .ycm_extra_conf.py, 
+and then change the CFLAGS in .ycm_extra_conf.py according to the project.
    
-    genHeader.sh used for generate the -I option in ycm_extra_conf.py, like below: 
+genHeader.sh used for generate the -I option in ycm_extra_conf.py, like below: 
 
 ```
-    '-I','oam/adapt/inc',
-    '-I','oam/adapt/inc/zte',
-    '-I','cli/inc',
-    '-I','cmn',
+    '-I','src/inc',
+    '-I','include',
 ```
 
 ShortKey
