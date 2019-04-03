@@ -14,7 +14,7 @@ I'm a C/C++ developer,so this vim profile is very suitable for C/C++ developer, 
 
 Installation
 ============
-###1.Install vim profile
+### 1.Install vim profile
  
 ```
     git clone https://github.com/geesun/Android-stuff.git
@@ -23,13 +23,13 @@ Installation
     cp vim ~/.vim -a 
 ```
   
-###2. Install plugin
+### 2. Install plugin
 
 ```
     :PlugInstall 
 ```
 
-###3. Install YouCompleteMe: 
+### 3. Install YouCompleteMe: 
 ######    Install Language support
 
 ```BASH
