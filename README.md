@@ -17,8 +17,8 @@ Installation
 ### 1.Install vim profile
  
 ```
-    git clone https://github.com/geesun/Android-stuff.git
-    cd Android-stuff
+    git clone https://github.com/geesun/Vim-stuff.git
+    cd Vim-stuff
     cp vimrc ~/.vimrc 
     cp vim ~/.vim -a 
 ```
@@ -34,7 +34,7 @@ Installation
 
 ```BASH
     cd ~/.vim/plugged/YouCompleteMe/ 
-    ./install.sh --clang-completer --system-clang
+    ./install.py --clang-completer
 ```
 
 ######    Copy extra conf
