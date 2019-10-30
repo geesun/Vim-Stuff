@@ -49,6 +49,7 @@ Plug 'chazy/cscope_maps'
 
 Plug 'geesun/cscope_dynamic'
 nmap <F12> <Plug>CscopeDBInit
+nmap <F10> <Plug>CscopeDBLinuxInit
 
 Plug 'vim-airline/vim-airline'
 set laststatus=2
