@@ -5,7 +5,6 @@ This is my .vimrc and plugins, plugins are manageed by [vim-plug](https://github
 
 I'm a C/C++ developer,so this vim profile is very suitable for C/C++ developer, I have install the following plug in: 
 
-* [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)  -  Code complete
 * [cscope_maps](https://github.com/chazy/cscope_maps) - cscope key mapping
 * [cscope_dynamic](https://github.com/geesun/cscope_dynamic) - Dynamic generate cscope database  
 * [vim-airline](https://github.com/vim-airline/vim-airline)  - Nice status bar
@@ -29,30 +28,14 @@ Installation
     :PlugInstall 
 ```
 
-### 3. Install YouCompleteMe: 
-######    Install Language support
-
-```BASH
-    cd ~/.vim/plugged/YouCompleteMe/ 
-    ./install.py --clang-completer
-```
-
-######    Copy extra conf
-In your project root directory, you can copy ycm_extra_conf.py and rename it as .ycm_extra_conf.py, 
-and then change the CFLAGS in .ycm_extra_conf.py according to the project.
-   
-genHeader.sh used for generate the -I option in ycm_extra_conf.py, like below: 
-
-```
-    '-I','src/inc',
-    '-I','include',
-```
-
 ShortKey
 ============
 * F12 - Create the cscope database 
+* F10 - Create the arm64 Linux cscope database  
 * CTRL + p - Nav buffer and open a buffer
 * CTRL + ] - Jump to this tag define 
 * CTRL + T - Jump back 
 * CTRL + \ + s - Find the symbol reference
+* SPACE + z  - Toggle full screen
+* SPACE + m  - Toggle the mini buf
 

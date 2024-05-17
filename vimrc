@@ -32,16 +32,15 @@ set si
 set cindent
 
 colorscheme evening 
-set guifont=DejaVu\ Sans\ Mono\ 10
+set guifont=DejaVu\ Sans\ Mono:h12
 syntax on
 set hlsearch
+
+let mapleader = " "
 
 "################################### vim plug start ##########################################
 
 call plug#begin('~/.vim/plugged')
-
-Plug 'Valloric/YouCompleteMe'
-let g:ycm_confirm_extra_conf = 0
 
 Plug 'craigemery/vim-autotag'
 
@@ -60,17 +59,36 @@ set hidden
 let g:CtrlSpaceDefaultMappingKey = "<C-p>"
 
 Plug 'fholgado/minibufexpl.vim'
-let g:miniBufExplModSelTarget = 1
 let g:miniBufExplorerMoreThanOne = 2
 let g:miniBufExplModSelTarget = 0
 let g:miniBufExplUseSingleClick = 1
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplVSplit = 25
 let g:miniBufExplSplitBelow=1
-let g:bufExplorerSortBy = "name"
+let g:miniBufExplSortBy = 'mru'
 autocmd BufRead,BufNew :call UMiniBufExplorer
-map <leader>u :TMiniBufExplorer<cr>
+map <leader>m :MBEToggle<cr>
 
 
 call plug#end()
 "################################### vim plug end   ##########################################
+
+
+"################################## 临时全屏###############
+function! Zoom ()
+    " check if is the zoomed state (tabnumber > 1 && window == 1)
+    if tabpagenr('$') > 1 && tabpagewinnr(tabpagenr(), '$') == 1
+        let l:cur_winview = winsaveview()
+        let l:cur_bufname = bufname('')
+        tabclose
+
+        " restore the view
+        if l:cur_bufname == bufname('')
+            call winrestview(cur_winview)
+        endif
+    else
+        tab split
+    endif
+endfunction
+
+nmap <leader>z :call Zoom()<CR>
